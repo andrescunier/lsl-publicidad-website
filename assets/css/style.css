@@ -856,6 +856,57 @@ section {
 .footer-logo {
     height: 60px;
     margin-bottom: 20px;
+    /* Filtro para convertir fondo blanco a transparente y hacer texto blanco */
+    filter: 
+        brightness(0) 
+        invert(1) 
+        drop-shadow(0 0 0 white);
+    mix-blend-mode: screen;
+    background: transparent;
+    padding: 10px;
+}
+
+/* Estilo específico para logo en footer - texto blanco sin fondo */
+.footer .footer-logo {
+    background: transparent !important;
+    padding: 10px 0;
+    /* Opción 1: Invertir colores para fondo oscuro */
+    filter: 
+        brightness(0) 
+        invert(1) 
+        contrast(100%) 
+        drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+}
+
+/* Alternativa: Si el logo tiene fondo blanco, hacerlo transparente */
+.footer .footer-logo.transparent-bg {
+    /* Remover fondo blanco y hacer texto visible */
+    filter: 
+        contrast(0) 
+        brightness(2) 
+        drop-shadow(0 0 0 white);
+    mix-blend-mode: difference;
+    background: transparent !important;
+}
+
+/* Para logos SVG en el footer */
+.footer svg {
+    fill: white !important;
+}
+
+.footer svg text {
+    fill: white !important;
+}
+
+.footer svg rect[fill="white"],
+.footer svg rect[fill="#ffffff"] {
+    fill: transparent !important;
+}
+
+/* Si el logo tiene texto, asegurar que sea blanco */
+.footer .footer-section svg text,
+.footer .footer-section img[alt*="LSL"] {
+    filter: brightness(0) invert(1) !important;
 }
 
 .footer-section p {
