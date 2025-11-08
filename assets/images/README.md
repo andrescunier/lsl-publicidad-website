@@ -3,30 +3,30 @@
 ## Estructura de Imágenes Recomendada
 
 ### Hero Section
-- `hero-1.jpg` - Imagen principal del slider (1920x1080)
-- `hero-2.jpg` - Segunda imagen del slider (1920x1080)
+- `gallery/carteleria-01.jpg` - Fachada iluminada para slide 1
+- `gallery/gigantografia-04.jpg` - Gigantografía urbana para slide 2
+- `gallery/vehicular-02.jpg` - Flota intervenida para slide 3
 
 ### Logos
-- `logo-lsl.png` - Logo principal en color
-- `logo-lsl-white.png` - Logo blanco para footer
-- `favicon.ico` - Icono del sitio
+- `brand-logo-dark.png` - Logo principal
+- `brand-logo-light.png` - Logo para fondos oscuros
+- `favicon.png` - Icono del sitio (PNG)
 
-### Servicios (Portfolio)
-- `portfolio-1.jpg` - Proyecto de Cartelería (600x400)
-- `portfolio-2.jpg` - Proyecto de Corporeos (600x400)
-- `portfolio-3.jpg` - Proyecto de Gigantografías (600x400)
-- `portfolio-4.jpg` - Proyecto de Decoración Vehicular (600x400)
+### Galería por Servicio
+- `gallery/carteleria-0*.jpg` - Cartelería y señalización real
+- `gallery/corporeos-0*.jpg` - Letras y tótems corpóreos
+- `gallery/gigantografia-0*.jpg` - Gigantografías y lonas
+- `gallery/vehicular-0*.jpg` - Decoración vehicular y flotas
+- `gallery/pop-0*.jpg` - Material POP y displays
+- `gallery/pinturerias-0*.jpg` - Intervenciones artísticas
+- `gallery/proyectos-0*.jpg` - Proyectos especiales / instalaciones
 
 ### Sobre Nosotros
-- `about-team.jpg` - Foto del equipo (800x600)
+- `gallery/proyectos-02.jpg` - Equipo y montajes en sitio
 
-## Imágenes Existentes Utilizables
+## Imágenes Curadas
 
-### De la carpeta wp-content/uploads/img/:
-- `logo.png` - Puede usarse como logo principal
-- `01.jpg, 02.jpg, 03.jpg, 04.jpg` - Pueden usarse para el hero slider
-- `42.jpg` - Imagen de servicios
-- Las imágenes numeradas pueden usarse para el portfolio
+Las carpetas originales con cientos de fotos fueron depuradas y renombradas dentro de `assets/images/gallery/` para facilitar su reutilización. Cada servicio cuenta con al menos cuatro imágenes listas para usarse en sliders, portfolios o galerías.
 
 ## Optimización Recomendada
 
@@ -66,19 +66,8 @@
 3. Implementar lazy loading para mejorar performance
 4. Usar srcset para imágenes responsive
 
-## Mapeo de Imágenes Existentes a la Nueva Web
+## Buenas Prácticas
 
-```
-wp-content/uploads/img/logo.png → assets/images/logo-lsl.png
-wp-content/uploads/img/01.jpg → assets/images/hero-1.jpg
-wp-content/uploads/img/02.jpg → assets/images/hero-2.jpg
-wp-content/uploads/img/42.jpg → assets/images/about-team.jpg
-```
-
-## Imágenes para Portfolio
-
-Las siguientes imágenes pueden usarse para el portfolio:
-- Cartelería: image293.jpg, image297.jpg, image299.jpg
-- Corporeos: image301.jpg, image303.jpg, image318.jpg
-- Gigantografías: image319.jpg, image322.jpg, image326.jpg
-- Decoración Vehicular: image327.png, image331.jpg, image333.jpg
+- Mantener respaldo de las fotografías en alta resolución fuera del repositorio.
+- Optimizar copias que se coloquen en `gallery/` (≤ 2000px lado mayor, JPG calidad 80%).
+- Reutilizar la nomenclatura `<servicio>-0X.jpg` para futuras incorporaciones.

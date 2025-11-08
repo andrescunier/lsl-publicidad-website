@@ -4,20 +4,25 @@
 
 /* Variables */
 :root {
-    --primary-color: #d4a050;
-    --secondary-color: #1a1a1a;
-    --accent-color: #f39c12;
-    --text-dark: #333333;
-    --text-light: #666666;
+    --primary-color: #00a7f5;
+    --primary-color-dark: #0058d6;
+    --secondary-color: #05031a;
+    --accent-color: #8e3bff;
+    --accent-hot: #ff3b7c;
+    --accent-warm: #ff9f1c;
+    --accent-green: #26c485;
+    --text-dark: #0f1627;
+    --text-light: #5f667b;
     --white: #ffffff;
-    --light-bg: #f8f9fa;
-    --border-color: #e1e8ed;
-    --shadow: 0 2px 10px rgba(0,0,0,0.1);
-    --shadow-hover: 0 5px 25px rgba(0,0,0,0.15);
-    --border-radius: 8px;
+    --light-bg: #f4f6fb;
+    --border-color: #dde1ef;
+    --shadow: 0 15px 35px rgba(5, 3, 26, 0.08);
+    --shadow-hover: 0 25px 60px rgba(5, 3, 26, 0.18);
+    --border-radius: 14px;
     --transition: all 0.3s ease;
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Inter', sans-serif;
+    --gradient-spectrum: linear-gradient(135deg, #00a7f5 0%, #0060ff 50%, #0058d6 100%);
 }
 
 /* Reset & Base Styles */
@@ -95,15 +100,15 @@ img {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-image: var(--gradient-spectrum);
     color: var(--white);
-    border-color: var(--primary-color);
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 95, 255, 0.25);
 }
 
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--primary-color);
     transform: translateY(-2px);
+    filter: brightness(1.05);
     box-shadow: var(--shadow-hover);
 }
 
@@ -115,7 +120,7 @@ img {
 
 .btn-outline:hover {
     background-color: var(--white);
-    color: var(--primary-color);
+    color: var(--primary-color-dark);
     transform: translateY(-2px);
 }
 
@@ -143,6 +148,9 @@ section {
 
 .highlight {
     color: var(--primary-color);
+    background: var(--gradient-spectrum);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* =================================================================
@@ -163,57 +171,125 @@ section {
 .header-top {
     background-color: var(--secondary-color);
     color: var(--white);
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header-top .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.header-social a,
+.header-contact {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    letter-spacing: 0.2px;
+}
+
 .header-contact span {
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-social {
+    display: flex;
+    gap: 12px;
 }
 
 .header-social a {
     color: var(--white);
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .header-social a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .navbar {
-    padding: 15px 0;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .navbar-brand .logo {
-    height: 50px;
+    height: 58px;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+}
+
+.brand-tagline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    min-width: 150px;
+    font-size: 0.8rem;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+}
+
+.brand-tagline span {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.brand-tagline small {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--primary-color);
+}
+
+.navbar-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-small {
+    padding: 10px 22px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
 }
 
 .navbar-menu {
     display: flex;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .navbar-nav {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 10px;
 }
 
 .navbar-nav li {
     position: relative;
     margin-left: 30px;
+}
+
+.navbar-nav li:first-child {
+    margin-left: 0;
 }
 
 .nav-link {
@@ -310,10 +386,23 @@ section {
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -60px;
+    width: 420px;
+    height: 420px;
+    background: url('../images/brand-franja-pixel.png') no-repeat center/contain;
+    opacity: 0.18;
+    pointer-events: none;
 }
 
 .hero-slider {
@@ -350,7 +439,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(212, 160, 80, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(5, 3, 26, 0.92) 0%, rgba(0, 167, 245, 0.5) 50%, rgba(0, 88, 214, 0.4) 100%);
 }
 
 .hero-content {
@@ -361,20 +450,57 @@ section {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.8rem, 4vw, 3.8rem);
+    margin-bottom: 25px;
     font-weight: 800;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 30px;
     opacity: 0.9;
+}
+
+.hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-bottom: 18px;
+}
+
+.hero-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-meta div {
+    background: rgba(5, 3, 26, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(8px);
+}
+
+.hero-meta span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.hero-meta p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Hero Navigation */
@@ -439,6 +565,98 @@ section {
 }
 
 /* =================================================================
+   CONFIDENCE / EYEBROW / INSIGHTS
+   ================================================================= */
+
+.section-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    background: var(--gradient-spectrum);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.confidence {
+    background: var(--white);
+    padding: 60px 0;
+    position: relative;
+}
+
+.confidence::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/brand-franja.png') center/cover no-repeat;
+    opacity: 0.04;
+}
+
+.confidence .container {
+    position: relative;
+    z-index: 2;
+}
+
+.confidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.confidence-card {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.confidence-card span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.confidence-card p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+.insights {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.insight {
+    padding: 35px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.insight h3 {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.insight span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* =================================================================
    SERVICES SECTION
    ================================================================= */
 
@@ -449,15 +667,15 @@ section {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    justify-items: center;
+    gap: 25px;
+    justify-items: stretch;
 }
 
 .service-card {
     background: var(--white);
-    padding: 40px;
+    padding: 40px 35px;
     border-radius: var(--border-radius);
-    text-align: center;
+    text-align: left;
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
@@ -471,7 +689,7 @@ section {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: var(--gradient-spectrum);
     transition: var(--transition);
     z-index: 1;
     opacity: 0;
@@ -492,8 +710,8 @@ section {
     z-index: 2;
     width: 80px;
     height: 80px;
-    margin: 0 auto 30px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    margin: 0 0 30px;
+    background: var(--gradient-spectrum);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -507,6 +725,7 @@ section {
     z-index: 2;
     margin-bottom: 20px;
     color: var(--text-dark);
+    font-size: 1.3rem;
 }
 
 .service-card p {
@@ -531,11 +750,63 @@ section {
 }
 
 /* =================================================================
+   PRODUCTS SECTION
+   ================================================================= */
+
+.products {
+    background: var(--white);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card-body {
+    padding: 20px 24px 24px;
+}
+
+.product-card h3 {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.product-card span {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* =================================================================
    FEATURES SECTION
    ================================================================= */
 
 .features {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--text-dark) 100%);
+    background: linear-gradient(135deg, #05031a 0%, #0a1a3d 50%, #1a2a4d 100%);
     color: var(--white);
 }
 
@@ -553,7 +824,9 @@ section {
 .feature-number {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--primary-color);
+    background: var(--gradient-spectrum);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
     font-family: var(--font-primary);
 }
@@ -606,8 +879,118 @@ section {
 }
 
 .about-image img {
+    width: 100%;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+}
+
+/* =================================================================
+   PROCESS / BRAND LAB / TESTIMONIALS
+   ================================================================= */
+
+.process {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.process-step {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.process-step span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    background: var(--gradient-spectrum);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.process-step h3 {
+    margin-bottom: 12px;
+}
+
+.brand-lab {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+.brand-lab-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+}
+
+.brand-lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.brand-card {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.brand-card img {
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.brand-card p {
+    color: var(--text-light);
+}
+
+.testimonials {
+    padding: 90px 0;
+    background: var(--light-bg);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.testimonial-author h4 {
+    margin-bottom: 4px;
+    color: var(--text-dark);
+}
+
+.testimonial-author span {
+    font-size: 0.95rem;
+    color: var(--primary-color);
 }
 
 /* =================================================================
@@ -676,7 +1059,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(212, 160, 80, 0.8) 100%);
+    background: linear-gradient(145deg, rgba(5, 3, 26, 0.85) 0%, rgba(0, 167, 245, 0.55) 50%, rgba(0, 88, 214, 0.45) 100%);
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -704,7 +1087,7 @@ section {
 .portfolio-link {
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
+    background: var(--gradient-spectrum);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -715,7 +1098,7 @@ section {
 }
 
 .portfolio-link:hover {
-    background: var(--accent-color);
+    background: var(--gradient-spectrum);
     transform: scale(1.1);
 }
 
@@ -724,7 +1107,7 @@ section {
    ================================================================= */
 
 .contact {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--text-dark) 100%);
+    background: linear-gradient(135deg, #05031a 0%, #0a1a3d 30%, #1a2a4d 70%, #2a3a5d 100%);
     color: var(--white);
 }
 
@@ -760,7 +1143,7 @@ section {
 .contact-detail i {
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
+    background: var(--gradient-spectrum);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -771,7 +1154,7 @@ section {
 
 .contact-detail h4 {
     margin-bottom: 5px;
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 .contact-detail p {
@@ -856,57 +1239,9 @@ section {
 .footer-logo {
     height: 60px;
     margin-bottom: 20px;
-    /* Filtro para convertir fondo blanco a transparente y hacer texto blanco */
-    filter: 
-        brightness(0) 
-        invert(1) 
-        drop-shadow(0 0 0 white);
-    mix-blend-mode: screen;
+    filter: none;
     background: transparent;
-    padding: 10px;
-}
-
-/* Estilo específico para logo en footer - texto blanco sin fondo */
-.footer .footer-logo {
-    background: transparent !important;
-    padding: 10px 0;
-    /* Opción 1: Invertir colores para fondo oscuro */
-    filter: 
-        brightness(0) 
-        invert(1) 
-        contrast(100%) 
-        drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
-}
-
-/* Alternativa: Si el logo tiene fondo blanco, hacerlo transparente */
-.footer .footer-logo.transparent-bg {
-    /* Remover fondo blanco y hacer texto visible */
-    filter: 
-        contrast(0) 
-        brightness(2) 
-        drop-shadow(0 0 0 white);
-    mix-blend-mode: difference;
-    background: transparent !important;
-}
-
-/* Para logos SVG en el footer */
-.footer svg {
-    fill: white !important;
-}
-
-.footer svg text {
-    fill: white !important;
-}
-
-.footer svg rect[fill="white"],
-.footer svg rect[fill="#ffffff"] {
-    fill: transparent !important;
-}
-
-/* Si el logo tiene texto, asegurar que sea blanco */
-.footer .footer-section svg text,
-.footer .footer-section img[alt*="LSL"] {
-    filter: brightness(0) invert(1) !important;
+    padding: 0;
 }
 
 .footer-section p {
@@ -1083,21 +1418,34 @@ section {
     
     .navbar-menu {
         position: fixed;
-        top: 100%;
+        top: 70px;
         left: 0;
         width: 100%;
+        height: calc(100vh - 70px);
         background: var(--white);
         box-shadow: var(--shadow);
-        transform: translateY(-100%);
+        transform: translateY(-5%);
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
+        overflow-y: auto;
+        padding-bottom: 30px;
     }
     
     .navbar-menu.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+    }
+
+    .navbar-brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .navbar-cta {
+        display: none;
     }
     
     .navbar-nav {

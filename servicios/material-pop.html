@@ -7,7 +7,7 @@
     <meta name="description" content="Especialistas en material POP, displays, exhibidores, stands y material punto de venta. Soluciones publicitarias efectivas para impulsar tus ventas.">
     
     <!-- Favicon -->
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -23,46 +23,79 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+
+<!-- Header -->
+<header id="header" class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-contact">
+                <span><i class="fas fa-phone"></i> +54 11 4568-9923</span>
+                <span><i class="fas fa-envelope"></i> proyectos@lslpublicidad.com</span>
+                <span><i class="fas fa-location-dot"></i> Buenos Aires | Córdoba | Mendoza</span>
+            </div>
+            <div class="header-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <a href="../index.html">
-                    <img src="../assets/images/logo.png" alt="LSL Publicidad" class="logo">
+            <div class="navbar-brand">
+                <a href="../index.html#inicio">
+                    <img src="../assets/images/brand-logo-dark.png" alt="LSL Publicidad" class="logo">
                 </a>
+                <div class="brand-tagline">
+                    <span>Publicidad</span>
+                    <small>15 años liderando proyectos B2B</small>
+                </div>
             </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav">
+                    <li><a href="../index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="../index.html#servicios" class="nav-link">Servicios</a></li>
+                                    <li><a href="../index.html#productos" class="nav-link">Productos</a></li>
+<li><a href="../index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="../index.html#metodologia" class="nav-link">Metodología</a></li>
+                    <li><a href="../index.html#proyectos" class="nav-link">Casos</a></li>
+                    <li><a href="../index.html#contacto" class="nav-link">Contacto</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="nav-link">Servicios <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="carteleria.html"><i class="fas fa-store"></i> Cartelería</a></li>
+                        <li><a href="corporeos.html"><i class="fas fa-cube"></i> Corpóreos</a></li>
+                        <li><a href="gigantografias.html"><i class="fas fa-image"></i> Gigantografías</a></li>
+                        <li><a href="decoracion-vehicular.html"><i class="fas fa-car"></i> Decoración Vehicular</a></li>
+                        <li><a href="pinturerias-artisticas.html"><i class="fas fa-palette"></i> Pinturerías Artísticas</a></li>
+                        <li><a href="material-pop.html" class="active"><i class="fas fa-bullhorn"></i> Material POP</a></li>
+                        <li><a href="proyectos-especiales.html"><i class="fas fa-lightbulb"></i> Proyectos Especiales</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#about">Nosotros</a></li>
-                <li class="dropdown">
-                    <a href="../index.html#services">Servicios <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="carteleria.html"><i class="fas fa-store"></i> Cartelería</a>
-                        <a href="corporeos.html"><i class="fas fa-cube"></i> Corpóreos</a>
-                        <a href="gigantografias.html"><i class="fas fa-image"></i> Gigantografías</a>
-                        <a href="decoracion-vehicular.html"><i class="fas fa-car"></i> Decoración Vehicular</a>
-                        <a href="pinturerias-artisticas.html"><i class="fas fa-palette"></i> Pinturerías Artísticas</a>
-                        <a href="material-pop.html" class="active"><i class="fas fa-bullhorn"></i> Material POP</a>
-                        <a href="proyectos-especiales.html"><i class="fas fa-lightbulb"></i> Proyectos Especiales</a>
-                    </div>
-                </li>
-                <li><a href="../index.html#portfolio">Portfolio</a></li>
-                <li><a href="../index.html#contact">Contacto</a></li>
-            </ul>
+
+            <div class="navbar-cta">
+                <a href="../index.html#contacto" class="btn btn-primary btn-small">Agendar asesoría</a>
+            </div>
+
+            <button class="navbar-toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+</header>
 
     <!-- Breadcrumb -->
     <section class="breadcrumb">
         <div class="container">
             <nav class="breadcrumb-nav">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#services">Servicios</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
                 <li class="active">Material POP</li>
             </nav>
         </div>
@@ -104,7 +137,7 @@
                     </a>
                 </div>
                 <div class="service-hero-image">
-                    <img src="../assets/images/services/material-pop-hero.jpg" alt="Material POP LSL Publicidad" data-aos="fade-left" data-aos-delay="200">
+                    <img src="../assets/images/gallery/pop-01.jpg" alt="Material POP LSL Publicidad" data-aos="fade-left" data-aos-delay="200">
                     <div class="material-badge">
                         <i class="fas fa-chart-line"></i>
                         <span>Sales+</span>
@@ -133,7 +166,7 @@
                         <li>Diseños compactos y funcionales</li>
                         <li>Fácil reposición de productos</li>
                         <li>Materiales resistentes al uso</li>
-                        <li>Branding integrado efectivo</li>
+                        <li>Comunicación visual efectiva</li>
                     </ul>
                 </div>
                 
@@ -227,9 +260,25 @@
                 
                 <div class="materials-image" data-aos="fade-left">
                     <div class="image-stack">
-                        <img src="../assets/images/services/material-pop-materials.jpg" alt="Materiales para Material POP">
+                        <img src="../assets/images/gallery/pop-03.jpg" alt="Materiales para Material POP">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="service-gallery">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Galería real</p>
+                <h2>Material POP en punto de venta</h2>
+            </div>
+            <div class="gallery-grid">
+                <img src="../assets/images/gallery/pop-01.jpg" alt="Isla promocional POP">
+                <img src="../assets/images/gallery/pop-02.jpg" alt="Display modular">
+                <img src="../assets/images/gallery/pop-03.jpg" alt="Detalle de exhibidor">
+                <img src="../assets/images/gallery/pop-04.jpg" alt="Exhibidores en góndola">
             </div>
         </div>
     </section>
@@ -347,7 +396,7 @@
                         <div class="form-group">
                             <textarea name="descripcion" rows="4" placeholder="Describe tu necesidad: objetivos, ubicación, duración de uso, cantidad requerida, etc."></textarea>
                         </div>
-                        <button type="submit" class="btn">
+                        <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i>
                             Enviar Solicitud
                         </button>
@@ -357,70 +406,57 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="../assets/images/logo.png" alt="LSL Publicidad" class="footer-logo">
-                    <p>Transformamos ideas en realidades visuales impactantes. Más de una década creando soluciones publicitarias innovadoras.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Servicios</h3>
-                    <ul>
-                        <li><a href="carteleria.html">Cartelería</a></li>
-                        <li><a href="corporeos.html">Corpóreos</a></li>
-                        <li><a href="gigantografias.html">Gigantografías</a></li>
-                        <li><a href="decoracion-vehicular.html">Decoración Vehicular</a></li>
-                        <li><a href="pinturerias-artisticas.html">Pinturerías Artísticas</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Calle Principal 123, Ciudad</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+54 11 1234-5678</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@lslpublicidad.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Lun - Vie: 8:00 - 18:00</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Enlaces</h3>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../index.html#about">Nosotros</a></li>
-                        <li><a href="../index.html#portfolio">Portfolio</a></li>
-                        <li><a href="../index.html#contact">Contacto</a></li>
-                    </ul>
+    
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../assets/images/brand-logo-light.png" alt="LSL Publicidad" class="footer-logo">
+                <p>Especialistas en comunicación visual integral: consultoría, diseño, producción e instalación a escala regional.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 LSL Publicidad. Todos los derechos reservados.</p>
+            <div class="footer-section">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="carteleria.html">Cartelería</a></li>
+                    <li><a href="corporeos.html">Corpóreos</a></li>
+                    <li><a href="gigantografias.html">Gigantografías</a></li>
+                    <li><a href="decoracion-vehicular.html">Decoración Vehicular</a></li>
+                    <li><a href="pinturerias-artisticas.html">Pinturerías Artísticas</a></li>
+                    <li><a href="material-pop.html">Material POP</a></li>
+                    <li><a href="proyectos-especiales.html">Proyectos Especiales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="../index.html#nosotros">Nosotros</a></li>
+                    <li><a href="../index.html#metodologia">Metodología</a></li>
+                    <li><a href="../index.html#proyectos">Casos</a></li>
+                    <li><a href="../index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Córdoba 2150, Buenos Aires</p>
+                    <p><i class="fas fa-phone"></i> +54 11 4568-9923</p>
+                    <p><i class="fas fa-envelope"></i> proyectos@lslpublicidad.com</p>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LSL Publicidad | Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

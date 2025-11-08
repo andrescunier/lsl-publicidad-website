@@ -16,13 +16,12 @@ Página web moderna y responsive para LSL Publicidad, empresa líder en solucion
 
 ### 🛠️ Servicios Destacados
 - **Cartelería** - Señalización comercial de alta calidad
-- **Corporeos** - Letras corpóreas en LED, acrílico y acero
+- **Corpóreos** - Letras corpóreas en LED, acrílico y acero
 - **Gigantografías** - Impresión digital de gran formato
 - **Decoración Vehicular** - Ploteos y wrapping completo
 - **Pinturerías Artísticas** - Murales y decoración personalizada
 - **Material POP** - Displays y material promocional
-
-### 💻 Tecnologías Utilizadas
+- **Proyectos Especiales** - Soluciones personalizadas a medida
 - **HTML5** - Estructura semántica moderna
 - **CSS3** - Flexbox, Grid, Variables CSS, Animaciones
 - **JavaScript ES6+** - Funcionalidades interactivas
@@ -33,11 +32,12 @@ Página web moderna y responsive para LSL Publicidad, empresa líder en solucion
 ## 🎨 Paleta de Colores
 
 ```css
---primary-color: #d4a050;    /* Oro corporativo */
---secondary-color: #1a1a1a;  /* Negro elegante */
---accent-color: #f39c12;     /* Naranja vibrante */
---text-dark: #333333;        /* Texto principal */
---text-light: #666666;       /* Texto secundario */
+--primary-color: #00a7f5;     /* Azul corporativo */
+--primary-color-dark: #0058d6; /* Azul oscuro */
+--secondary-color: #05031a;   /* Negro elegante */
+--accent-color: #8e3bff;      /* Púrpura */
+--text-dark: #0f1627;         /* Texto principal */
+--text-light: #5f667b;        /* Texto secundario */
 ```
 
 ## 📱 Responsive Design
@@ -55,7 +55,7 @@ cd lsl-publicidad-website
 ```
 
 ### Desarrollo Local
-1. Abrir `index_new.html` en tu navegador
+1. Abrir `index.html` en tu navegador
 2. Para desarrollo con servidor local:
    ```bash
    # Con Python
@@ -72,21 +72,20 @@ cd lsl-publicidad-website
 
 ```
 lsl-publicidad-website/
-├── index_new.html              # Página principal nueva
+├── index.html                  # Landing principal
 ├── assets/
 │   ├── css/
 │   │   └── style.css          # Estilos principales
 │   ├── js/
 │   │   └── main.js           # JavaScript principal
 │   └── images/
-│       ├── hero-1.jpg        # Imagen hero principal
-│       ├── hero-2.jpg        # Imagen hero secundaria
-│       ├── logo-lsl.png      # Logo principal
-│       ├── logo-lsl-white.png # Logo blanco
-│       ├── about-team.jpg    # Foto del equipo
-│       ├── portfolio-*.jpg   # Imágenes del portfolio
-│       └── README.md         # Guía de imágenes
-├── wp-content/              # Assets del sitio anterior
+│       ├── brand-*.png      # Variantes del logo oficial
+│       ├── favicon.png      # Favicon en uso
+│       ├── gallery/        # Fotografías reales por servicio
+│       │   ├── carteleria-*.jpg
+│       │   ├── corporeos-*.jpg
+│       │   └── ...
+│       └── README.md       # Guía de imágenes
 └── README.md               # Este archivo
 ```
 
@@ -98,7 +97,7 @@ lsl-publicidad-website/
 - Navegación por indicadores
 
 ### 💼 Servicios
-- Grid responsive con 6 servicios principales
+- Grid responsive con 7 servicios principales
 - Cards con efectos hover
 - Iconografía Font Awesome
 

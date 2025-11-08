@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSL Publicidad - Soluciones Integrales de Publicidad</title>
-    <meta name="description" content="LSL Publicidad - Líderes en soluciones de publicidad integral. Cartelería, corporeos, gigantografías, decoración vehicular y más de 15 años de experiencia.">
-    
+    <title>LSL Publicidad - Comunicación Visual Premium</title>
+    <meta name="description" content="LSL Publicidad potencia marcas con soluciones integrales de cartelería, corpóreos, gigantografías y proyectos especiales diseñados bajo estándares corporativos.">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -22,45 +23,53 @@
     <header id="header" class="header">
         <div class="header-top">
             <div class="container">
-                <div class="header-social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
                 <div class="header-contact">
-                    <span><i class="fas fa-phone"></i> +54 11 1234-5678</span>
-                    <span><i class="fas fa-envelope"></i> info@lslpublicidad.com</span>
+                    <span><i class="fas fa-phone"></i> +54 11 4568-9923</span>
+                    <span><i class="fas fa-envelope"></i> proyectos@lslpublicidad.com</span>
+                    <span><i class="fas fa-location-dot"></i> Buenos Aires | Córdoba | Mendoza</span>
+                </div>
+                <div class="header-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
                 </div>
             </div>
         </div>
-        
+
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <img src="assets/images/logo-lsl.png" alt="LSL Publicidad" class="logo">
+                    <img src="assets/images/brand-logo-dark.png" alt="LSL Publicidad" class="logo">
                 </div>
-                
+
                 <div class="navbar-menu" id="navbar-menu">
                     <ul class="navbar-nav">
                         <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="#productos" class="nav-link">Productos</a></li>
+                        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                        <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+                        <li><a href="#proyectos" class="nav-link">Casos</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
                         <li class="dropdown">
-                            <a href="#servicios" class="nav-link">Servicios <i class="fas fa-chevron-down"></i></a>
+                            <a href="javascript:void(0);" class="nav-link">Servicios <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#carteleria">Cartelería</a></li>
-                                <li><a href="#corporeos">Corporeos</a></li>
-                                <li><a href="#gigantografias">Gigantografías</a></li>
-                                <li><a href="#deco-vehicular">Decoración Vehicular</a></li>
-                                <li><a href="#pinturerías">Pinturerías Artísticas</a></li>
-                                <li><a href="#pop">Material POP</a></li>
-                                <li><a href="#proyectos">Proyectos Especiales</a></li>
+                                <li><a href="servicios/carteleria.html">Cartelería</a></li>
+                                <li><a href="servicios/corporeos.html">Corpóreos</a></li>
+                                <li><a href="servicios/gigantografias.html">Gigantografías</a></li>
+                                <li><a href="servicios/decoracion-vehicular.html">Decoración Vehicular</a></li>
+                                <li><a href="servicios/pinturerias-artisticas.html">Pinturerías Artísticas</a></li>
+                                <li><a href="servicios/material-pop.html">Material POP</a></li>
+                                <li><a href="servicios/proyectos-especiales.html">Proyectos Especiales</a></li>
                             </ul>
                         </li>
-                        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
                     </ul>
                 </div>
-                
+
+                <div class="navbar-cta">
+                    <a href="#contacto" class="btn btn-primary btn-small">Agendar asesoría</a>
+                </div>
+
                 <button class="navbar-toggle" id="navbar-toggle">
                     <span></span>
                     <span></span>
@@ -73,43 +82,126 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-slider">
-            <div class="slide active" data-bg="assets/images/hero-1.jpg">
+            <div class="slide active" data-bg="assets/images/gallery/carteleria-01.jpg">
                 <div class="container">
                     <div class="hero-content">
-                        <h1>Transformamos Ideas en <span class="highlight">Realidad Visual</span></h1>
-                        <p>Soluciones integrales de publicidad con más de 15 años de experiencia en el mercado</p>
+                        <p class="hero-eyebrow">Consultoría + Diseño + Producción</p>
+                        <h1>Publicidad integral con <span class="highlight">estándares corporativos</span></h1>
+                        <p>Gestionamos proyectos llave en mano: cartelería, corpóreos, gigantografías y proyectos especiales para empresas que buscan impacto medible.</p>
+                        <div class="hero-meta">
+                            <div>
+                                <span>120+</span>
+                                <p>Marcas activas</p>
+                            </div>
+                            <div>
+                                <span>48h</span>
+                                <p>Plan de acción preliminar</p>
+                            </div>
+                            <div>
+                                <span>ISO</span>
+                                <p>Procesos certificados</p>
+                            </div>
+                        </div>
                         <div class="hero-buttons">
-                            <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                            <a href="#proyectos" class="btn btn-outline">Ver Proyectos</a>
+                            <a href="#servicios" class="btn btn-primary">Explorar servicios</a>
+                            <a href="#proyectos" class="btn btn-outline">Ver casos reales</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="slide" data-bg="assets/images/hero-2.jpg">
+
+            <div class="slide" data-bg="assets/images/gallery/gigantografia-04.jpg">
                 <div class="container">
                     <div class="hero-content">
-                        <h1>Innovación en <span class="highlight">Cada Proyecto</span></h1>
-                        <p>Desde gigantografías hasta decoración vehicular, creamos impacto visual que perdura</p>
+                        <p class="hero-eyebrow">Ingeniería + Instalación</p>
+                        <h1>Infraestructura visual para <span class="highlight">espacios complejos</span></h1>
+                        <p>Coordinamos obras nocturnas, permisos municipales y logística nacional sin frenar la operación de tu negocio.</p>
+                        <div class="hero-meta">
+                            <div>
+                                <span>+3000 m2</span>
+                                <p>Instalados cada mes</p>
+                            </div>
+                            <div>
+                                <span>14</span>
+                                <p>Especialidades in-house</p>
+                            </div>
+                            <div>
+                                <span>360°</span>
+                                <p>Seguimiento en tiempo real</p>
+                            </div>
+                        </div>
                         <div class="hero-buttons">
-                            <a href="#servicios" class="btn btn-primary">Descubre Más</a>
-                            <a href="#contacto" class="btn btn-outline">Cotizar Proyecto</a>
+                            <a href="servicios/proyectos-especiales.html" class="btn btn-primary">Ver proyectos especiales</a>
+                            <a href="#contacto" class="btn btn-outline">Hablar con un especialista</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-bg="assets/images/gallery/vehicular-02.jpg">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="hero-eyebrow">Co-creamos experiencias</p>
+                        <h1>Desarrollamos <span class="highlight">proyectos a medida</span> y soluciones POP</h1>
+                        <p>Desde prototipos 3D hasta producción en serie, aseguramos calidad visual en cada punto de contacto.</p>
+                        <div class="hero-meta">
+                            <div>
+                                <span>+850</span>
+                                <p>Elementos POP por mes</p>
+                            </div>
+                            <div>
+                                <span>7</span>
+                                <p>Laboratorios propios</p>
+                            </div>
+                            <div>
+                                <span>99%</span>
+                                <p>Clientes recurrentes</p>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="servicios/material-pop.html" class="btn btn-primary">Material POP</a>
+                            <a href="#proyectos" class="btn btn-outline">Ver proyectos</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Hero Navigation -->
         <div class="hero-nav">
             <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
             <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
         </div>
-        
+
         <!-- Hero Indicators -->
         <div class="hero-indicators">
             <button class="indicator active" data-slide="0"></button>
             <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Confidence Section -->
+    <section class="confidence">
+        <div class="container">
+            <div class="confidence-grid">
+                <article class="confidence-card" data-aos="fade-up">
+                    <span>+15</span>
+                    <p>Años liderando proyectos regionales</p>
+                </article>
+                <article class="confidence-card" data-aos="fade-up" data-aos-delay="100">
+                    <span>4.8/5</span>
+                    <p>Satisfacción promedio en auditorías</p>
+                </article>
+                <article class="confidence-card" data-aos="fade-up" data-aos-delay="200">
+                    <span>30</span>
+                    <p>Montajes simultáneos</p>
+                </article>
+                <article class="confidence-card" data-aos="fade-up" data-aos-delay="300">
+                    <span>0</span>
+                    <p>Incidentes en seguridad industrial</p>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -117,98 +209,139 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestros <span class="highlight">Servicios</span></h2>
-                <p>Ofrecemos soluciones completas de publicidad visual para potenciar tu marca</p>
+                <p class="section-eyebrow">Portafolio integral</p>
+                <h2>Nuestros <span class="highlight">servicios core</span></h2>
+                <p>Equipos especializados coordinan cada disciplina con metodologías ágiles y control de calidad continuo.</p>
             </div>
-            
+
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fas fa-sign"></i>
-                    </div>
-                    <h3>Cartelería</h3>
-                    <p>Señalización comercial de alta calidad para interior y exterior. Letreros luminosos, carteles de acrílico y más.</p>
-                    <a href="#carteleria" class="service-link">Conocer más</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3>Corporeos</h3>
-                    <p>Letras corpóreas en LED, acrílico, acero inoxidable. Diseños tridimensionales que destacan tu marca.</p>
-                    <a href="#corporeos" class="service-link">Conocer más</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-images"></i>
-                    </div>
-                    <h3>Gigantografías</h3>
-                    <p>Impresión digital de gran formato en alta resolución. Lonas, vinilo adhesivo, malla sombra y más.</p>
-                    <a href="#gigantografias" class="service-link">Conocer más</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
+                <article class="service-card" id="carteleria" data-aos="fade-up">
+                    <div class="service-icon"><i class="fas fa-sign"></i></div>
+                    <h3>Cartelería Corporativa</h3>
+                    <p>Diseñamos y producimos señalética interior y exterior con iluminación inteligente y materiales premium.</p>
+                    <a href="servicios/carteleria.html" class="service-link">Detalle del servicio</a>
+                </article>
+
+                <article class="service-card" id="corporeos" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-cube"></i></div>
+                    <h3>Corpóreos & Letreros 3D</h3>
+                    <p>Letras volumétricas, tótems y esculturas con acabados metalizados o acrílico cristal para sedes y eventos.</p>
+                    <a href="servicios/corporeos.html" class="service-link">Detalle del servicio</a>
+                </article>
+
+                <article class="service-card" id="gigantografias" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-images"></i></div>
+                    <h3>Gigantografías & OOH</h3>
+                    <p>Impresión de gran formato, gestión de permisos y montaje en altura con equipos propios certificados.</p>
+                    <a href="servicios/gigantografias.html" class="service-link">Detalle del servicio</a>
+                </article>
+
+                <article class="service-card" id="deco-vehicular" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-car"></i></div>
                     <h3>Decoración Vehicular</h3>
-                    <p>Ploteos vehiculares, wrapping completo, vinilos cortados. Tu vehículo convertido en herramienta de marketing.</p>
-                    <a href="#deco-vehicular" class="service-link">Conocer más</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Pinturerías Artísticas</h3>
-                    <p>Murales personalizados, efectos especiales en paredes, decoración artística para espacios comerciales.</p>
-                    <a href="#pinturerías" class="service-link">Conocer más</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <h3>Material POP</h3>
-                    <p>Displays, exhibidores, material promocional en punto de venta. Soluciones para impulsar tus ventas.</p>
-                    <a href="#pop" class="service-link">Conocer más</a>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
+                    <p>Wrapping integral, flotas coordinadas y vinilos de alta durabilidad con garantía extendida.</p>
+                    <a href="servicios/decoracion-vehicular.html" class="service-link">Detalle del servicio</a>
+                </article>
+
+                <article class="service-card" id="pinturerias" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Intervenciones Artísticas</h3>
+                    <p>Murales, ambientaciones conceptuales y obras site-specific para retail, hoteles y espacios culturales.</p>
+                    <a href="servicios/pinturerias-artisticas.html" class="service-link">Detalle del servicio</a>
+                </article>
+
+                <article class="service-card" id="pop" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Material POP & Retail</h3>
+                    <p>Desarrollamos exhibidores modulares, displays inteligentes y kits de activación para franquicias.</p>
+                    <a href="servicios/material-pop.html" class="service-link">Detalle del servicio</a>
+                </article>
+
+                <article class="service-card" id="proyectos-especiales" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3>Proyectos Especiales</h3>
-                    <p>Desarrollos personalizados y soluciones integrales a medida. Desde concept hasta implementación completa.</p>
-                    <a href="#proyectos" class="service-link">Conocer más</a>
-                </div>
+                    <p>Conceptualizamos experiencias inmersivas, biofilia aplicada y soluciones tecnológicas a medida.</p>
+                    <a href="servicios/proyectos-especiales.html" class="service-link">Detalle del servicio</a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Products Section -->
+    <section id="productos" class="products">
         <div class="container">
-            <div class="features-grid">
-                <div class="feature-item" data-aos="fade-right">
-                    <div class="feature-number">15+</div>
-                    <h3>Años de Experiencia</h3>
-                    <p>Más de una década perfeccionando nuestros servicios y satisfaciendo a nuestros clientes.</p>
-                </div>
-                
-                <div class="feature-item" data-aos="fade-up">
-                    <div class="feature-number">500+</div>
-                    <h3>Proyectos Realizados</h3>
-                    <p>Cientos de empresas confían en nosotros para sus necesidades de publicidad visual.</p>
-                </div>
-                
-                <div class="feature-item" data-aos="fade-left">
-                    <div class="feature-number">24h</div>
-                    <h3>Servicio Rápido</h3>
-                    <p>Respuesta inmediata a tus consultas y entregas en los tiempos acordados.</p>
-                </div>
+            <div class="section-header">
+                <p class="section-eyebrow">Productos visuales</p>
+                <h2>Creaciones <span class="highlight">reales</span></h2>
+                <p>Tomamos las fotografías que compartiste para mostrar piezas en contexto real: fachadas, corpóreos, gigantografías, flotas y más.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card" data-aos="fade-up">
+                    <img src="assets/images/gallery/carteleria-02.jpg" alt="Cartelería exterior iluminada">
+                    <div class="product-card-body">
+                        <h3>Cartelería</h3>
+                        <span>Fachadas y señalética comercial</span>
+                    </div>
+                </article>
+                <article class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/gallery/corporeos-01.jpg" alt="Letras corpóreas retroiluminadas">
+                    <div class="product-card-body">
+                        <h3>Corpóreos</h3>
+                        <span>Letras 3D y tótems premium</span>
+                    </div>
+                </article>
+                <article class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/gallery/gigantografia-01.jpg" alt="Gigantografía en centro comercial">
+                    <div class="product-card-body">
+                        <h3>Gigantografías</h3>
+                        <span>OOH & grandes formatos</span>
+                    </div>
+                </article>
+                <article class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/gallery/vehicular-03.jpg" alt="Flota ploteada">
+                    <div class="product-card-body">
+                        <h3>Decoración Vehicular</h3>
+                        <span>Wrapping de flotas y utilitarios</span>
+                    </div>
+                </article>
+                <article class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/gallery/pop-02.jpg" alt="Exhibidores POP en retail">
+                    <div class="product-card-body">
+                        <h3>Material POP</h3>
+                        <span>Displays, islas y exhibidores</span>
+                    </div>
+                </article>
+                <article class="product-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/images/gallery/pinturerias-02.jpg" alt="Intervención artística en muro">
+                    <div class="product-card-body">
+                        <h3>Intervenciones Artísticas</h3>
+                        <span>Manejo de color y texturas</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights">
+        <div class="container">
+            <div class="insights-grid">
+                <article class="insight" data-aos="fade-up">
+                    <h3>Performance</h3>
+                    <p>Dashboard de avances compartido con tu equipo para asegurar decisiones en tiempo real.</p>
+                    <span>PMO interno</span>
+                </article>
+                <article class="insight" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Garantía extendida</h3>
+                    <p>Protocolos de mantenimiento y reposición disponibles para cada instalación o campaña.</p>
+                    <span>Hasta 24 meses</span>
+                </article>
+                <article class="insight" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Sustentabilidad</h3>
+                    <p>Selección de materiales reciclables, gestión de residuos y trazabilidad certificada.</p>
+                    <span>Programa Green Print</span>
+                </article>
             </div>
         </div>
     </section>
@@ -218,36 +351,53 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
-                    <h2>Líderes en <span class="highlight">Publicidad Visual</span></h2>
-                    <p class="lead">Con más de 15 años en el mercado, LSL Publicidad se ha consolidado como una empresa líder en soluciones integrales de comunicación visual.</p>
-                    
-                    <p>Nos especializamos en transformar las ideas de nuestros clientes en realidades visuales impactantes. Desde pequeños emprendimientos hasta grandes corporaciones, ofrecemos soluciones personalizadas que se adaptan a cada necesidad y presupuesto.</p>
-                    
+                    <p class="section-eyebrow">Consultoría + Producción</p>
+                    <h2>Un <span class="highlight">equipo multidisciplinario</span> a tu servicio</h2>
+                    <p class="lead">Diseñadores, arquitectos, ingenieros y artistas trabajando bajo una misma metodología que asegura trazabilidad desde el brief hasta la instalación.</p>
                     <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Calidad garantizada en todos nuestros trabajos</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Tecnología de última generación</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Equipo profesional altamente capacitado</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Servicio integral desde el diseño hasta la instalación</span>
-                        </div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Oficinas técnicas y talleres propios</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Control de calidad ISO 9001</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Servicio integral nationwide</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Abordaje estratégico junto a Marketing & Facilities</span></div>
                     </div>
-                    
-                    <a href="#contacto" class="btn btn-primary">Trabajar con nosotros</a>
+                    <a href="#contacto" class="btn btn-primary">Programar reunión</a>
                 </div>
-                
                 <div class="about-image" data-aos="fade-left">
-                    <img src="assets/images/about-team.jpg" alt="Equipo LSL Publicidad">
+                    <img src="assets/images/gallery/proyectos-02.jpg" alt="Equipo LSL Publicidad en montaje">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section id="metodologia" class="process">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Cómo trabajamos</p>
+                <h2>Metodología <span class="highlight">Project Partner</span></h2>
+                <p>Un roadmap claro para proyectos de alto impacto, diseñado para equipos corporativos.</p>
+            </div>
+            <div class="process-steps">
+                <article class="process-step" data-aos="fade-up">
+                    <span>01</span>
+                    <h3>Diagnóstico inmersivo</h3>
+                    <p>Workshops, relevamientos técnicos y análisis de marca para definir objetivos y KPIs.</p>
+                </article>
+                <article class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <span>02</span>
+                    <h3>Diseño & prototipado</h3>
+                    <p>Render 3D, test de materiales y paneles de color aprobados por tu equipo.</p>
+                </article>
+                <article class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <span>03</span>
+                    <h3>Producción & logística</h3>
+                    <p>Plan de fabricación escalable, control de tiempos y logística nacional coordinada.</p>
+                </article>
+                <article class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <span>04</span>
+                    <h3>Instalación & postventa</h3>
+                    <p>Equipos certificados, reportes fotográficos y mantenimiento predictivo.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -256,54 +406,88 @@
     <section id="proyectos" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestros <span class="highlight">Trabajos Realizados</span></h2>
-                <p>Ejemplos de la calidad y variedad de nuestros servicios</p>
+                <p class="section-eyebrow">Casos recientes</p>
+                <h2>Resultados <span class="highlight">medibles</span></h2>
+                <p>Seleccionamos algunos proyectos que combinan estrategia, creatividad y ejecución impecable.</p>
             </div>
-            
+
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="*">Todos</button>
                 <button class="filter-btn" data-filter=".carteleria">Cartelería</button>
-                <button class="filter-btn" data-filter=".corporeos">Corporeos</button>
+                <button class="filter-btn" data-filter=".corporeos">Corpóreos</button>
                 <button class="filter-btn" data-filter=".gigantografias">Gigantografías</button>
                 <button class="filter-btn" data-filter=".vehicular">Decoración Vehicular</button>
             </div>
-            
+
             <div class="portfolio-grid">
                 <div class="portfolio-item carteleria" data-aos="fade-up">
-                    <img src="assets/images/portfolio-1.jpg" alt="Proyecto de Cartelería">
+                    <img src="assets/images/gallery/carteleria-03.jpg" alt="Proyecto de Cartelería">
                     <div class="portfolio-overlay">
-                        <h3>Señalización Comercial</h3>
-                        <p>Cartelería exterior para centro comercial</p>
-                        <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+                        <h3>Campus corporativo</h3>
+                        <p>Señalética integral con mapa digital y tótems táctiles.</p>
+                        <a href="servicios/carteleria.html" class="portfolio-link"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item corporeos" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/images/portfolio-2.jpg" alt="Proyecto de Corporeos">
+                    <img src="assets/images/gallery/corporeos-03.jpg" alt="Proyecto de Corporeos">
                     <div class="portfolio-overlay">
-                        <h3>Letras Corporeas LED</h3>
-                        <p>Señalización luminosa para restaurante</p>
-                        <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+                        <h3>Letras LED premium</h3>
+                        <p>Implementación para cadena gastronómica regional.</p>
+                        <a href="servicios/corporeos.html" class="portfolio-link"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item gigantografias" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/images/portfolio-3.jpg" alt="Proyecto de Gigantografías">
+                    <img src="assets/images/gallery/gigantografia-02.jpg" alt="Proyecto de Gigantografías">
                     <div class="portfolio-overlay">
-                        <h3>Gigantografía Publicitaria</h3>
-                        <p>Lona publicitaria de gran formato</p>
-                        <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+                        <h3>Lanzamiento retail</h3>
+                        <p>Gigantografías y piezas POP coordinadas en 12 sedes.</p>
+                        <a href="servicios/gigantografias.html" class="portfolio-link"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="portfolio-item vehicular" data-aos="fade-up" data-aos-delay="300">
-                    <img src="assets/images/portfolio-4.jpg" alt="Decoración Vehicular">
+                    <img src="assets/images/gallery/vehicular-04.jpg" alt="Decoración Vehicular">
                     <div class="portfolio-overlay">
-                        <h3>Ploteo Vehicular</h3>
-                        <p>Decoración completa de flota comercial</p>
-                        <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
+                        <h3>Flota logística</h3>
+                        <p>Coordinación de 60 unidades con seguimiento en vivo.</p>
+                        <a href="servicios/decoracion-vehicular.html" class="portfolio-link"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Qué dicen los clientes</p>
+                <h2>Experiencias <span class="highlight">reales</span></h2>
+            </div>
+            <div class="testimonial-grid">
+                <article class="testimonial-card" data-aos="fade-up">
+                    <p>“LSL entendió la complejidad de nuestros lanzamientos y armó un plan nacional sincronizado con tiendas y logística.”</p>
+                    <div class="testimonial-author">
+                        <h4>Ana Quiroga</h4>
+                        <span>Directora de Marketing | Retail</span>
+                    </div>
+                </article>
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <p>“Nos entregaron manuales técnicos, renders y seguimiento diario. La instalación nocturna fue impecable.”</p>
+                    <div class="testimonial-author">
+                        <h4>Martín López</h4>
+                        <span>Gerente de Facilities | Real Estate</span>
+                    </div>
+                </article>
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <p>“Valoramos la capacidad de prototipar experiencias POP y replicarlas en todo el país en tiempo récord.”</p>
+                    <div class="testimonial-author">
+                        <h4>Laura Pereyra</h4>
+                        <span>Trade Marketing | Consumo Masivo</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -313,79 +497,80 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-right">
-                    <h2>¿Tienes un proyecto en mente?</h2>
-                    <p>Estamos aquí para ayudarte a hacer realidad tus ideas. Contáctanos y comencemos a trabajar juntos.</p>
-                    
+                    <p class="section-eyebrow">Hablemos</p>
+                    <h2>¿Listo para activar tu próximo proyecto?</h2>
+                    <p>Coordinemos una reunión virtual o presencial con nuestro equipo de cuentas para definir los próximos pasos.</p>
+
                     <div class="contact-details">
                         <div class="contact-detail">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Dirección</h4>
-                                <p>Buenos Aires, Argentina</p>
+                                <p>Av. Córdoba 2150, Buenos Aires</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-detail">
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Teléfono</h4>
-                                <p>+54 11 1234-5678</p>
+                                <p>+54 11 4568-9923</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-detail">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>info@lslpublicidad.com</p>
+                                <p>proyectos@lslpublicidad.com</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-detail">
                             <i class="fas fa-clock"></i>
                             <div>
                                 <h4>Horarios</h4>
-                                <p>Lun - Vie: 8:00 - 18:00</p>
+                                <p>Lun a Vie | 8:00 - 18:00 hs</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form" data-aos="fade-left">
                     <form id="contact-form">
-                        <h3>Solicitar Cotización</h3>
-                        
+                        <h3>Solicitar cotización</h3>
+
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Nombre completo" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="email" name="email" placeholder="Email corporativo" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <input type="tel" name="telefono" placeholder="Teléfono">
+                            <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp">
                         </div>
-                        
+
                         <div class="form-group">
                             <select name="servicio" required>
                                 <option value="">Seleccionar servicio</option>
                                 <option value="carteleria">Cartelería</option>
-                                <option value="corporeos">Corporeos</option>
+                                <option value="corporeos">Corpóreos</option>
                                 <option value="gigantografias">Gigantografías</option>
                                 <option value="decoracion-vehicular">Decoración Vehicular</option>
-                                <option value="pinturerías">Pinturerías Artísticas</option>
+                                <option value="pinturerias">Pinturerías Artísticas</option>
                                 <option value="material-pop">Material POP</option>
                                 <option value="proyectos-especiales">Proyectos Especiales</option>
                                 <option value="otro">Otro</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
-                            <textarea name="mensaje" placeholder="Describe tu proyecto" rows="5" required></textarea>
+                            <textarea name="mensaje" placeholder="Describe objetivos, plazos y ubicaciones" rows="5" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+
+                        <button type="submit" class="btn btn-primary">Enviar brief</button>
                     </form>
                 </div>
             </div>
@@ -397,53 +582,52 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/logo-lsl-white.png" alt="LSL Publicidad" class="footer-logo">
-                    <p>Transformamos ideas en realidad visual con más de 15 años de experiencia en el mercado publicitario.</p>
-                    
+                    <img src="assets/images/brand-logo-light.png" alt="LSL Publicidad" class="footer-logo">
+                    <p>Transformamos ideas en experiencias visuales memorables con una propuesta integral de consultoría, diseño y producción.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Servicios</h4>
                     <ul>
-                        <li><a href="#carteleria">Cartelería</a></li>
-                        <li><a href="#corporeos">Corporeos</a></li>
-                        <li><a href="#gigantografias">Gigantografías</a></li>
-                        <li><a href="#deco-vehicular">Decoración Vehicular</a></li>
-                        <li><a href="#pinturerías">Pinturerías Artísticas</a></li>
-                        <li><a href="#pop">Material POP</a></li>
-                        <li><a href="#proyectos">Proyectos Especiales</a></li>
+                        <li><a href="servicios/carteleria.html">Cartelería</a></li>
+                        <li><a href="servicios/corporeos.html">Corpóreos</a></li>
+                        <li><a href="servicios/gigantografias.html">Gigantografías</a></li>
+                        <li><a href="servicios/decoracion-vehicular.html">Decoración Vehicular</a></li>
+                        <li><a href="servicios/pinturerias-artisticas.html">Pinturerías Artísticas</a></li>
+                        <li><a href="servicios/material-pop.html">Material POP</a></li>
+                        <li><a href="servicios/proyectos-especiales.html">Proyectos Especiales</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
-                    <h4>Enlaces</h4>
+                    <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#proyectos">Proyectos</a></li>
                         <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#metodologia">Metodología</a></li>
+                        <li><a href="#proyectos">Casos</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <div class="footer-contact">
-                        <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
-                        <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
-                        <p><i class="fas fa-envelope"></i> info@lslpublicidad.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Córdoba 2150, Buenos Aires</p>
+                        <p><i class="fas fa-phone"></i> +54 11 4568-9923</p>
+                        <p><i class="fas fa-envelope"></i> proyectos@lslpublicidad.com</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 LSL Publicidad. Todos los derechos reservados.</p>
+                <p>&copy; 2025 LSL Publicidad | Todos los derechos reservados | Política de privacidad</p>
             </div>
         </div>
     </footer>
