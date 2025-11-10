@@ -259,23 +259,21 @@
     
     // Contact form functionality
     function initContactForm() {
-        const contactForm = document.getElementById('contact-form');
+        const forms = document.querySelectorAll('form[data-webhook]');
         
-        if (!contactForm) return;
+        if (!forms.length) return;
         
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
+        const defaultSuccessMessage = '¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.';
+        const defaultErrorMessage = 'No pudimos enviar el mensaje. Inténtalo nuevamente en unos minutos.';
         
-        function showMessage(message, type = 'success') {
-            // Remove existing messages
-            const existingMsg = contactForm.querySelector('.form-message');
+        function showMessage(form, message, type = 'success') {
+            const existingMsg = form.querySelector('.form-message');
             if (existingMsg) {
                 existingMsg.remove();
             }
             
-            // Create new message
+            if (!message) return;
+            
             const messageDiv = document.createElement('div');
             messageDiv.className = `form-message ${type}`;
             messageDiv.textContent = message;
@@ -291,9 +289,8 @@
                 }
             `;
             
-            contactForm.insertBefore(messageDiv, contactForm.firstChild);
+            form.insertBefore(messageDiv, form.firstChild);
             
-            // Auto remove message after 5 seconds
             setTimeout(() => {
                 if (messageDiv.parentNode) {
                     messageDiv.remove();
@@ -301,52 +298,81 @@
             }, 5000);
         }
         
-        function handleSubmit(e) {
-            e.preventDefault();
+        forms.forEach(form => {
+            const webhookUrl = form.getAttribute('data-webhook');
+            if (!webhookUrl) return;
             
-            const formData = new FormData(contactForm);
-            const nombre = formData.get('nombre').trim();
-            const email = formData.get('email').trim();
-            const telefono = formData.get('telefono').trim();
-            const servicio = formData.get('servicio');
-            const mensaje = formData.get('mensaje').trim();
-            
-            // Validation
-            if (!nombre) {
-                showMessage('Por favor, ingresa tu nombre.', 'error');
-                return;
-            }
-            
-            if (!email || !validateEmail(email)) {
-                showMessage('Por favor, ingresa un email válido.', 'error');
-                return;
-            }
-            
-            if (!servicio) {
-                showMessage('Por favor, selecciona un servicio.', 'error');
-                return;
-            }
-            
-            if (!mensaje) {
-                showMessage('Por favor, describe tu proyecto.', 'error');
-                return;
-            }
-            
-            // Simulate form submission (replace with actual form handling)
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                showMessage('¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.', 'success');
-                contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        }
-        
-        contactForm.addEventListener('submit', handleSubmit);
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                
+                showMessage(form);
+                
+                const submitBtn = form.querySelector('[type="submit"]');
+                const originalBtnText = submitBtn ? submitBtn.textContent : '';
+                const loadingText = submitBtn ? submitBtn.getAttribute('data-loading-text') || 'Enviando...' : '';
+                
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = loadingText;
+                }
+                
+                const formData = new FormData(form);
+                const payload = {};
+                
+                formData.forEach((value, key) => {
+                    const normalizedValue = typeof value === 'string' ? value.trim() : value;
+                    
+                    if (key in payload) {
+                        const current = payload[key];
+                        payload[key] = Array.isArray(current) ? [...current, normalizedValue] : [current, normalizedValue];
+                    } else {
+                        payload[key] = normalizedValue;
+                    }
+                });
+                
+                if (form.dataset.source) {
+                    payload.source = form.dataset.source;
+                }
+                
+                payload.page_url = window.location.href;
+                payload.submitted_at = new Date().toISOString();
+                
+                const successMessage = form.getAttribute('data-success-message') || defaultSuccessMessage;
+                const errorMessage = form.getAttribute('data-error-message') || defaultErrorMessage;
+                
+                try {
+                    const response = await fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (!response.ok) {
+                        showMessage(form, `${errorMessage} (Error ${response.status})`, 'error');
+                        return;
+                    }
+                    
+                    showMessage(form, successMessage, 'success');
+                    form.reset();
+                } catch (error) {
+                    console.error('Error al enviar el formulario:', error);
+                    showMessage(form, errorMessage, 'error');
+                } finally {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText || 'Enviar';
+                    }
+                }
+            });
+        });
     }
     
     // Back to top button
